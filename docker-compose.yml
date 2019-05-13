@@ -1,0 +1,11 @@
+version: "3"
+services:
+   app:
+     build:
+       context: ./
+       dockerfile: build/rabbitmq.dockerfile
+     env_file:
+      - ./env/rabbitmq.env
+     ports:
+      - "9001:80"
+     restart: always
